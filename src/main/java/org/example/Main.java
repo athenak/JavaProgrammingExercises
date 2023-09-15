@@ -1,55 +1,26 @@
 package org.example;
+import java.util.HashMap;
+import java.util.Hashtable;
+import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
 
-        int x = 0;
-        int[] arrayNum = {1, 2, 3, 4, 5, 3, 4, 7, 7};
+        // Java Hashtable class implements a hashtable, which maps keys to values.
+        // It inherits Dictionary class and implements the Map interface.
 
-        for(int i = 0; i < arrayNum.length; i++)
-            System.out.println(arrayNum[i]);
+        // Java Hashtable class is synchronized.
 
-        int numToFind = 7;
-        int found = 0;
-        int position = -1;
+        Hashtable<Integer, String> htable = new Hashtable<Integer, String>();
 
-        for(int i = 0; i < arrayNum.length; i++) {
-            if (numToFind == arrayNum[i]) {
-                found = arrayNum[i];
-                position = i;
-                break;
-            }
+        htable.put(1, "Candies");
+        htable.put(2, "Chocolates");
+        htable.put(3, "Marshmallows");
+        htable.put(4, "Jelly Beans");
+
+        for(Map.Entry i:htable.entrySet()){
+            System.out.println(i.getKey() + " " + i.getValue());
         }
-            if(found != 0 )
-                System.out.println("The number " + numToFind + " is found at the position " + position + " in the array.");
-            else
-                System.out.println("The number " + numToFind + " s not found in the array.");
-
-
-    int repeatNum = 0;
-    found = 0;
-
-        for(int j = 0; j < arrayNum.length; j++) {
-            if (numToFind == arrayNum[j]) {
-                found = arrayNum[j];
-                position = j;
-                repeatNum++;
-
-            }
-        }
-
-        if(found != 0 )
-            System.out.println("The number " + numToFind + " is found at the position " + position + " in the array. It was found " + repeatNum + " times in the array.");
-        else
-            System.out.println("The number " + numToFind + " s not found in the array.");
-
-        }
-
-
-
-
-
-
+    }
 }
 
