@@ -1,55 +1,60 @@
 package org.example;
 
+// Import the HashMap class
+import java.util.HashMap;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
 
-        int x = 0;
-        int[] arrayNum = {1, 2, 3, 4, 5, 3, 4, 7, 7};
+        // Create a HashMap object called provinceCapitals
+        HashMap<String, String> provinceCapitals = new HashMap<String, String>();
 
-        for(int i = 0; i < arrayNum.length; i++)
-            System.out.println(arrayNum[i]);
+        //Add keys and values (Province, City)
+        provinceCapitals.put("Quebec", "Quebec City");
+        provinceCapitals.put("British Columbia", "Victoria");
+        provinceCapitals.put("Alberta", "Edmonton");
+        provinceCapitals.put("Saskatchewan", "Regina");
+        provinceCapitals.put("Manitoba", "Winnipeg");
+        provinceCapitals.put("Ontario", "Toronto");
+        provinceCapitals.put("New Brunswick", "Fredericton");
+        provinceCapitals.put("Nova Scotia", "Halifax");
+        provinceCapitals.put("Newfoundland", "St. John's");
+        provinceCapitals.put("Prince Edward Island", "Charlottetown");
 
-        int numToFind = 7;
-        int found = 0;
-        int position = -1;
+        // To access a value in the HashMap, use the get() method and refer to its key
+        provinceCapitals.get("Quebec");
 
-        for(int i = 0; i < arrayNum.length; i++) {
-            if (numToFind == arrayNum[i]) {
-                found = arrayNum[i];
-                position = i;
-                break;
-            }
-        }
-            if(found != 0 )
-                System.out.println("The number " + numToFind + " is found at the position " + position + " in the array.");
-            else
-                System.out.println("The number " + numToFind + " s not found in the array.");
+            // print out a key
+        System.out.println(provinceCapitals.get("Quebec"));
+
+       // To find out how many items there are, use the size() method
+        provinceCapitals.size();
+        System.out.println(provinceCapitals.size());
+
+        // Loop through the items of a HashMap with a for-each loop
 
 
-    int repeatNum = 0;
-    found = 0;
+        System.out.println();
 
-        for(int j = 0; j < arrayNum.length; j++) {
-            if (numToFind == arrayNum[j]) {
-                found = arrayNum[j];
-                position = j;
-                repeatNum++;
-
-            }
-        }
-
-        if(found != 0 )
-            System.out.println("The number " + numToFind + " is found at the position " + position + " in the array. It was found " + repeatNum + " times in the array.");
-        else
-            System.out.println("The number " + numToFind + " s not found in the array.");
-
+        // To remove an item, use the remove() method and refer to the key
+        // Note: Use the keySet() method if you only want the keys, and use the values() method if you only want the values
+        // Print keys
+        for (String i : provinceCapitals.keySet()) {
+            System.out.println(i);
         }
 
+        System.out.println();
+
+        // Print values
+        for (String i : provinceCapitals.values()) {
+            System.out.println(i);
+        }
 
 
 
 
 
+
+        }
 }
 
