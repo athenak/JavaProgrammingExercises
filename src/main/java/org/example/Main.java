@@ -42,14 +42,8 @@ public class Main {
         if(found != 0 )
             System.out.println("The number " + numToFind + " is found at the position " + position + " in the array. It was found " + repeatNum + " times in the array.");
         else
-            System.out.println("The number " + numToFind + " s not found in the array.");
+            System.out.println("The number " + numToFind + " is not found in the array.");
 
         }
-
-
-
-
-
-
 }
 
