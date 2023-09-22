@@ -2,8 +2,7 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
-
+        
         int x = 0;
         int[] arrayNum = {1, 2, 3, 4, 5, 3, 4, 7, 7};
 
