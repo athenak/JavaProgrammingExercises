@@ -2,8 +2,7 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
-
+        
         int x = 0;
         int[] arrayNum = {1, 2, 3, 4, 5, 3, 4, 7, 7};
 
@@ -43,7 +42,6 @@ public class Main {
             System.out.println("The number " + numToFind + " is found at the position " + position + " in the array. It was found " + repeatNum + " times in the array.");
         else
             System.out.println("The number " + numToFind + " is not found in the array.");
-
         }
 }
 
